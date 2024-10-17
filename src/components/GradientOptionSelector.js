@@ -55,6 +55,36 @@ const GradientOptionSelector = ({label, containerStyle, options = []}) => {
   );
 };
 
+export const GlowButton = ({title, onPress}) => {
+  return (
+    <LinearGradient
+      style={{
+        borderRadius: 50,
+        padding: 1,
+      }}
+      colors={['#F93DAB', '#A03FE3', '#29F1E5']}
+      start={{x: -0.1, y: 0}}
+      end={{x: 1, y: 2}}
+      locations={[0, 0.5, 1]}>
+      <Pressable
+        onPress={onPress}
+        style={[
+          styles.item,
+          {
+            backgroundColor: 'black',
+            borderRadius: 50,
+            paddingVertical: 5,
+            paddingHorizontal: 30,
+            minWidth: null,
+          },
+        ]}>
+        <SvgFromXml xml={SVG_XMLs.glowOverlay} style={styles.glowOverlay} />
+        <Text style={{color: 'white', fontSize: 12}}>{title}</Text>
+      </Pressable>
+    </LinearGradient>
+  );
+};
+
 export default GradientOptionSelector;
 
 const styles = StyleSheet.create({

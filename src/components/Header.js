@@ -9,7 +9,11 @@ const Header = ({startIcon, endIcon, title, endIconText}) => {
     <View style={styles.container}>
       {startIcon && <Icon icon={startIcon} onPress={navigation.goBack} />}
       <Text style={styles.title}>{title}</Text>
-      {(endIcon || endIconText) && <Icon icon={endIcon} text={endIconText} />}
+      {endIcon || endIconText ? (
+        <Icon icon={endIcon} text={endIconText} />
+      ) : (
+        <Text style={{width: 45}}></Text>
+      )}
     </View>
   );
 };
@@ -41,6 +45,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
+    flex: 1,
+    textAlign: 'center',
     fontSize: 20,
     fontWeight: 'bold',
     color: 'white',

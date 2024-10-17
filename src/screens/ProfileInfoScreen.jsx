@@ -4,7 +4,7 @@ import BackgroundContainer from '../components/BackgroundContainer';
 import Input from '../components/Input';
 import GradientTextButton from '../components/GradientButton';
 
-const ProfileInfoScreen = () => {
+const ProfileInfoScreen = ({navigation}) => {
   return (
     <BackgroundContainer>
       <View style={{flex: 1, justifyContent: 'space-between'}}>
@@ -26,7 +26,9 @@ const ProfileInfoScreen = () => {
         </View>
         <GradientTextButton
           title="Done"
-          onPress={() => {}}
+          onPress={() => {
+            navigation.navigate('addFriendsScreen');
+          }}
           style={{marginHorizontal: 28}}
         />
       </View>
