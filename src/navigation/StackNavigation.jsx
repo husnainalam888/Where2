@@ -6,6 +6,7 @@ import OnBoardingScreen from '../screens/OnBoardingScreen';
 import Colors from '../theme/Colors';
 import SignUp from '../screens/SignUp';
 import OtpScreen from '../screens/OtpScreen';
+import ProfileInfoScreen from '../screens/ProfileInfoScreen';
 const Stack = createNativeStackNavigator();
 
 const StackNavigation = () => {
@@ -22,6 +23,7 @@ const StackNavigation = () => {
         <Stack.Screen name="onBoarding" component={OnBoardingScreen} />
         <Stack.Screen name="signUp" component={SignUp} />
         <Stack.Screen name="otpScreen" component={OtpScreen} />
+        <Stack.Screen name="profileInfo" component={ProfileInfoScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

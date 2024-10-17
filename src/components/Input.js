@@ -9,13 +9,16 @@ const Input = ({
   secureTextEntry,
   autoCapitalize,
   containerStyle,
+  inputStyle,
+  multiLine,
 }) => {
   return (
     <View style={[styles.container, containerStyle]}>
       <Text style={styles.label}>{label}</Text>
       <TextInput
         value={value}
-        style={styles.input}
+        multiline={multiLine}
+        style={[styles.input, inputStyle]}
         secureTextEntry={secureTextEntry}
         placeholderTextColor={'rgba(85, 92, 115, 1)'}
         autoCapitalize={autoCapitalize}

@@ -19,7 +19,7 @@ const OtpScreen = ({navigation}) => {
             textInputStyle={styles.input}
             handleTextChange={text => {
               if (text.length == 4) {
-                navigation.goBack();
+                navigation.navigate('profileInfo');
               }
             }}
           />

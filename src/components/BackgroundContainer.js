@@ -1,8 +1,21 @@
-import React from 'react';
-import {View, StyleSheet, ScrollView} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {View, StyleSheet, ScrollView, Keyboard} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
 const BackgroundContainer = ({children}) => {
+  const [isKeyboardVisible, setIsKeyboardVisible] = useState(false);
+  useEffect(() => {
+    Keyboard.addListener('keyboardDidShow', () => {
+      setIsKeyboardVisible(true);
+    });
+    Keyboard.addListener('keyboardDidHide', () => {
+      setIsKeyboardVisible(false);
+    });
+    return () => {
+      Keyboard.removeAllListeners('keyboardDidShow');
+      Keyboard.removeAllListeners('keyboardDidHide');
+    };
+  });
   return (
     <View style={styles.backgroundContainer}>
       <LinearGradient
@@ -10,7 +23,14 @@ const BackgroundContainer = ({children}) => {
         start={{x: 0.5, y: 0}}
         end={{x: 0.5, y: 1}}
         style={styles.background}></LinearGradient>
-      <ScrollView contentContainerStyle={{flexGrow: 1}} style={styles.absolute}>
+      <ScrollView
+        contentContainerStyle={[
+          {
+            flexGrow: 1,
+          },
+          isKeyboardVisible && {paddingBottom: 200},
+        ]}
+        style={styles.absolute}>
         {children}
       </ScrollView>
     </View>
