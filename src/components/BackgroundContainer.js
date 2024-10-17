@@ -11,10 +11,10 @@ const BackgroundContainer = ({children}) => {
     Keyboard.addListener('keyboardDidHide', () => {
       setIsKeyboardVisible(false);
     });
-    return () => {
-      Keyboard.removeAllListeners('keyboardDidShow');
-      Keyboard.removeAllListeners('keyboardDidHide');
-    };
+    // return () => {
+    //   Keyboard.removeAllListeners('keyboardDidShow');
+    //   Keyboard.removeAllListeners('keyboardDidHide');
+    // };
   });
   return (
     <View style={styles.backgroundContainer}>
