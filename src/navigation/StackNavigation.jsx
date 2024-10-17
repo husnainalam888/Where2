@@ -4,6 +4,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import OnBoardingScreen from '../screens/OnBoardingScreen';
 import Colors from '../theme/Colors';
+import SignUp from '../screens/SignUp';
+import OtpScreen from '../screens/OtpScreen';
 const Stack = createNativeStackNavigator();
 
 const StackNavigation = () => {
@@ -18,6 +20,8 @@ const StackNavigation = () => {
         }}
         initialRouteName="onBoarding">
         <Stack.Screen name="onBoarding" component={OnBoardingScreen} />
+        <Stack.Screen name="signUp" component={SignUp} />
+        <Stack.Screen name="otpScreen" component={OtpScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

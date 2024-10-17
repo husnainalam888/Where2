@@ -32,6 +32,25 @@ const SVG_XMLs = {
 </defs>
 </svg>
 `,
+  back: `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.0603 13.78C10.1869 13.78 10.3136 13.7333 10.4136 13.6333C10.6069 13.44 10.6069 13.12 10.4136 12.9267L6.06693 8.58001C5.74693 8.26001 5.74693 7.74001 6.06693 7.42001L10.4136 3.07335C10.6069 2.88001 10.6069 2.56001 10.4136 2.36668C10.2203 2.17335 9.90026 2.17335 9.70693 2.36668L5.36026 6.71335C5.02026 7.05335 4.82693 7.51335 4.82693 8.00001C4.82693 8.48668 5.01359 8.94668 5.36026 9.28668L9.70693 13.6333C9.80693 13.7267 9.93359 13.78 10.0603 13.78Z" fill="white"/>
+</svg>
+`,
+  arrow_down: `<svg width="7" height="6" viewBox="0 0 7 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.93301 5.25C3.74056 5.58333 3.25944 5.58333 3.06699 5.25L0.901924 1.5C0.709474 1.16667 0.950037 0.749999 1.33494 0.75L5.66506 0.75C6.04996 0.75 6.29053 1.16667 6.09808 1.5L3.93301 5.25Z" fill="white"/>
+</svg>
+`,
+  glowOverlay: `<svg width="167" height="40" viewBox="0 0 167 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 10C0 4.47715 4.47715 0 10 0H157C162.523 0 167 4.47715 167 10V20V30C167 35.5228 162.523 40 157 40H10C4.47716 40 0 35.5228 0 30V10Z" fill="url(#paint0_radial_4030_428)"/>
+<defs>
+<radialGradient id="paint0_radial_4030_428" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(83.5 20) rotate(90) scale(26.5 110.637)">
+<stop stop-color="#6F2C7A" stop-opacity="0"/>
+<stop offset="1" stop-color="#CC51E0" stop-opacity="0.3"/>
+</radialGradient>
+</defs>
+</svg>
+
+`,
 };
 
 export default SVG_XMLs;

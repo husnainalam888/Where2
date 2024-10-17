@@ -12,7 +12,10 @@ import {SvgFromXml} from 'react-native-svg';
 import SVG_XMLs from '../svgs/SVGs';
 import GradientTextButton from '../components/GradientButton';
 
-const OnBoardingScreen = () => {
+const OnBoardingScreen = ({navigation}) => {
+  const onGetStarted = () => {
+    navigation.navigate('signUp');
+  };
   return (
     <View style={{flex: 1}}>
       <View style={styles.imageContainer}>
@@ -34,10 +37,13 @@ const OnBoardingScreen = () => {
         style={styles.noise_overlay}
       />
       <View style={styles.subContainer}>
-        <View style={{flex: 0.5}} />
+        <View style={{flex: 0.6}} />
         <View style={{flex: 0.5, alignItems: 'center'}}>
-          <SvgFromXml xml={SVG_XMLs.where2_logo} style={{marginTop: 10}} />
           <View style={styles.content}>
+            <SvgFromXml
+              xml={SVG_XMLs.where2_logo}
+              style={{marginTop: 10, alignSelf: 'center'}}
+            />
             <View style={{gap: 10}}>
               <Text style={styles.heading}>
                 Find your crew. Discover your scene
@@ -46,7 +52,11 @@ const OnBoardingScreen = () => {
                 Connect with friends and find fun places to hang out.
               </Text>
             </View>
-            <GradientTextButton />
+            <GradientTextButton
+              title={'Get Started'}
+              onPress={onGetStarted}
+              style={{marginHorizontal: 20}}
+            />
           </View>
         </View>
       </View>
@@ -58,7 +68,7 @@ export default OnBoardingScreen;
 
 const styles = StyleSheet.create({
   imageContainer: {
-    flex: 0.5,
+    flex: 0.6,
   },
   image: {
     height: '100%',
@@ -81,14 +91,14 @@ const styles = StyleSheet.create({
     position: 'absolute',
     height: '100%',
     width: '100%',
-    justifyContent: 'flex-end',
+    justifyContent: 'space-between',
     alignItems: 'center',
   },
   content: {
     padding: 28,
-    gap: 50,
-    justifyContent: 'flex-end',
-    alignItems: 'center',
+    gap: 20,
+    justifyContent: 'space-between',
+    // alignItems: 'center',
     flex: 1,
   },
   heading: {
