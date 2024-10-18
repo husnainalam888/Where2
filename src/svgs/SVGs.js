@@ -40,16 +40,15 @@ const SVG_XMLs = {
 <path d="M3.93301 5.25C3.74056 5.58333 3.25944 5.58333 3.06699 5.25L0.901924 1.5C0.709474 1.16667 0.950037 0.749999 1.33494 0.75L5.66506 0.75C6.04996 0.75 6.29053 1.16667 6.09808 1.5L3.93301 5.25Z" fill="white"/>
 </svg>
 `,
-  glowOverlay: `<svg width="167" height="40" viewBox="0 0 167 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 10C0 4.47715 4.47715 0 10 0H157C162.523 0 167 4.47715 167 10V20V30C167 35.5228 162.523 40 157 40H10C4.47716 40 0 35.5228 0 30V10Z" fill="url(#paint0_radial_4030_428)"/>
+  glowOverlay: `<svg width="209" height="81" viewBox="0 0 209 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 10C0 4.47715 4.47715 0 10 0H199C204.523 0 209 4.47715 209 10V40.5V71C209 76.5229 204.523 81 199 81H10C4.47716 81 0 76.5229 0 71V10Z" fill="url(#paint0_radial_82_383)"/>
 <defs>
-<radialGradient id="paint0_radial_4030_428" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(83.5 20) rotate(90) scale(26.5 110.637)">
+<radialGradient id="paint0_radial_82_383" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(104.5 40.5) rotate(90) scale(53.6625 138.462)">
 <stop stop-color="#6F2C7A" stop-opacity="0"/>
 <stop offset="1" stop-color="#CC51E0" stop-opacity="0.3"/>
 </radialGradient>
 </defs>
 </svg>
-
 `,
 };
 
