@@ -29,7 +29,7 @@ const ProfileInfoScreen = ({navigation}) => {
           onPress={() => {
             navigation.navigate('addFriendsScreen');
           }}
-          style={{marginHorizontal: 28}}
+          style={{marginHorizontal: 28, marginTop: 28}}
         />
       </View>
     </BackgroundContainer>

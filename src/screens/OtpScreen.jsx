@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import BackgroundContainer from '../components/BackgroundContainer';
 import OTPTextView from 'react-native-otp-textinput';
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderColor: 'rgba(255, 255, 255, 0.1)',
     borderRadius: 10,
-    padding: 16,
+    padding: Platform.OS === 'ios' ? 16 : null,
     flex: 1,
     backgroundColor: 'rgba(130, 140, 169, 0.1)',
   },

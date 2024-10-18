@@ -22,13 +22,16 @@ const GradientOptionSelector = ({label, containerStyle, options = []}) => {
             style={{
               borderRadius: 10,
               padding: 1,
+              overflow: 'hidden',
             }}
             colors={
-              selected === option ? ['#F93DAB', '#A03FE3', '#29F1E5'] : []
+              selected === option
+                ? ['#F93DAB', '#A03FE3', '#29F1E5']
+                : ['#00000000', '#00000000', '#00000000']
             }
             start={{x: -0.1, y: 0}}
             end={{x: 1, y: 2}}
-            locations={selected === option ? [0, 0.5, 1] : []}
+            locations={selected === option ? [0, 0.5, 1] : [0, 0, 0]}
             key={index}>
             <Pressable
               onPress={() => {
@@ -61,6 +64,7 @@ export const GlowButton = ({title, onPress}) => {
       style={{
         borderRadius: 50,
         padding: 1,
+        overflow: 'hidden',
       }}
       colors={['#F93DAB', '#A03FE3', '#29F1E5']}
       start={{x: -0.1, y: 0}}

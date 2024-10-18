@@ -77,6 +77,7 @@ const styles = StyleSheet.create({
   textInput: {
     color: 'white',
     flex: 1,
+    padding: 0,
   },
   flagContainer: {
     flexDirection: 'row',

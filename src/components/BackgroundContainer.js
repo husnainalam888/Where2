@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {View, StyleSheet, ScrollView, Keyboard} from 'react-native';
+import {View, StyleSheet, ScrollView, Keyboard, Platform} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
 const BackgroundContainer = ({children}) => {
@@ -28,7 +28,7 @@ const BackgroundContainer = ({children}) => {
           {
             flexGrow: 1,
           },
-          isKeyboardVisible && {paddingBottom: 200},
+          isKeyboardVisible && Platform.OS === 'ios' && {paddingBottom: 200},
         ]}
         style={styles.absolute}>
         {children}

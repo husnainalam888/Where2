@@ -27,7 +27,7 @@ const SignUp = ({navigation}) => {
           <DatePickerComp label={'Birthday'} placeholder={'DD-MM-YYYY'} />
           <GradientOptionSelector label={'Gender'} options={genders} />
         </View>
-        <View style={{gap: 16}}>
+        <View style={{gap: 16, marginTop: 28}}>
           <GradientTextButton
             title="Create an Account"
             onPress={() => {
